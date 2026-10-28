@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>yield-placebo — La sombra digital</title>
+<style>
+  :root{--bg:#fbfaf8;--fg:#111;--muted:#6b7280;--line:#e5e7eb;--card:#fff}
+  body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,-apple-system,Segoe UI,Roboto;line-height:1.6}
+  .wrap{max-width:860px;margin:0 auto;padding:60px 24px}
+  header h1{font-family:Georgia,serif;font-size:3rem;letter-spacing:-2px;margin:0}
+  header p{color:var(--muted);max-width:600px}
+  blockquote{font-family:Georgia,serif;font-size:1.25rem;border-left:3px solid #111;padding-left:16px;margin:32px 0}
+  .grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:32px}
+  @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+  .card h3{margin:0 0 8px 0;font-size:0.95rem;text-transform:uppercase;letter-spacing:.08em}
+  .tag{display:inline-block;font-size:.7rem;border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-bottom:10px;color:var(--muted)}
+  .tag.sens{border-color:#111;color:#111;font-weight:600}
+  ul{margin:8px 0 0 18px;padding:0}
+  li{margin:4px 0}
+  .legal{margin-top:48px;border:1px dashed #111;border-radius:14px;padding:20px;background:#fff}
+  .legal h2{font-size:1rem;margin:0 0 12px 0}
+  footer{margin-top:80px;color:var(--muted);font-size:.85rem;border-top:1px solid var(--line);padding-top:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+<h1>yield-placebo</h1>
+<p>La deuda y su psicología. La seguridad de rendimiento extra es un placebo. El pago digital es su sombra.</p>
+</header>
+
+<blockquote>No es un mensajito flotando. Es un registro inalterable. Para validar, compensar y liquidar sin que el sistema se caiga, se requiere una cantidad masiva de datos.</blockquote>
+
+<div class="grid">
+  <div class="card">
+    <span class="tag">Técnico / Transaccional</span>
+    <h3>Para que el dinero no se caiga</h3>
+    <ul>
+      <li>CLABE, cuenta origen/destino, banco emisor/adquirente</li>
+      <li>Monto, concepto, referencia, hora exacta</li>
+      <li>ID de transacción SPEI / CoDi, estado de liquidación</li>
+      <li>Intentos, reintentos, reversos</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <span class="tag sens">SENSIBLE - Identidad</span>
+    <h3>Quién eres legalmente</h3>
+    <ul>
+      <li>Nombre completo, CURP, RFC</li>
+      <li>KYC, INE / pasaporte, fecha de nacimiento</li>
+      <li>Lista negra / PEP / scoring de riesgo</li>
+      <li>Coincidencia de titularidad</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <span class="tag sens">SENSIBLE - Dispositivo</span>
+    <h3>El cuerpo del pago</h3>
+    <ul>
+      <li>Device ID, modelo, OS, app version</li>
+      <li>IP, operadora, huella del navegador</li>
+      <li>Biometría, token, llave criptográfica</li>
+      <li>Comportamiento de tecleo / touch</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <span class="tag sens">SENSIBLE - Ubicación</span>
+    <h3>Dónde estabas</h3>
+    <ul>
+      <li>Geolocalización GPS en el momento del pago</li>
+      <li>Geocerca de comercio, IP location</li>
+      <li>Historial de ubicaciones frecuentes</li>
+      <li>Coordenadas de validación anti-fraude</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <span class="tag">Conductual / Perfil</span>
+    <h3>El placebo de la fricción cero</h3>
+    <ul>
+      <li>Frecuencia, ticket promedio, horarios</li>
+      <li>Red de contrapartes, grafo de pagos</li>
+      <li>Categorías de gasto, intereses</li>
+      <li>Probabilidad de churn / default</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <span class="tag">Regulatorio / Paternalista</span>
+    <h3>La red que te cuida</h3>
+    <ul>
+      <li>Reporte CNBV, Banxico, SAT</li>
+      <li>Logs de auditoría y trazabilidad 5+ años</li>
+      <li>Consentimiento de datos, aviso de privacidad</li>
+      <li>Capacidad de reversión / congelamiento</li>
+    </ul>
+  </div>
+</div>
+
+<div class="legal">
+<h2>Etiqueta legal — Conjunto de datos sensibles (Art. 3 LFPDP)</h2>
+<p style="margin:0;color:var(--muted)">Un pago "sin fricción" de $50 requiere, en conjunto:</p>
+<p><strong>Datos de identificación + patrimoniales + ubicación + biométricos + comportamiento</strong>. La suma de datos no sensibles crea un dato sensible por inferencia. Esa es la sombra. El efectivo no la deja. Lo digital sí.</p>
+</div>
+
+<footer>yield-placebo / BS2 — github.com/iSystem32/yield-placebo<br>Percepción = Tasa base + Ilusión de Alpha / Riesgo real = Socializado</footer>
+</div>
+</body>
+</html>
