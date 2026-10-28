@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>No portabilidad — yield-placebo</title>
+<style>
+:root{--bg:#fbfaf8;--fg:#111;--muted:#6b7280;--line:#e5e7eb}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:system-ui,Roboto;line-height:1.7}
+.wrap{max-width:720px;margin:0 auto;padding:60px 24px}
+h1{font-family:Georgia,serif;font-size:2.8rem;letter-spacing:-1.5px;margin:0}
+.sub{color:var(--muted);margin-top:8px}
+blockquote{border-left:3px solid #111;padding-left:16px;font-family:Georgia,serif;font-size:1.2rem;margin:32px 0}
+.card{border:1px solid var(--line);background:#fff;border-radius:14px;padding:20px;margin:16px 0}
+.tag{font-size:.7rem;border:1px solid #111;border-radius:999px;padding:2px 8px;font-weight:600}
+ul{margin-left:18px}
+.foot{margin-top:60px;border-top:1px solid var(--line);padding-top:20px;color:var(--muted);font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a href="../" style="text-decoration:none;color:var(--muted)">← spei</a>
+<h1>La no-portabilidad</h1>
+<p class="sub">Sección 9 — yield-placebo / BS2</p>
+
+<blockquote>
+Tienes derecho a tus datos, pero no a usarlos.<br>
+PDF ≠ portabilidad. Excel roto ≠ interoperabilidad.
+</blockquote>
+
+<div class="card">
+<span class="tag">ART. 51 LEY DE DATOS</span>
+<h3>La excusa perfecta</h3>
+<p>Respuesta estándar de la banca en México a solicitudes de portabilidad:</p>
+<p><i>"Los datos no se encuentran en formatos estructurados y comúnmente utilizados para su portabilidad"</i></p>
+<ul>
+<li>Sí tienen tu historial de 5 años</li>
+<li>Sí tienen tu score interno y tu grafo de pagos</li>
+<li>Te lo entregan en PDF escaneado o CSV inservible</li>
+<li>Resultado: no es usable por otro banco</li>
+</ul>
+</div>
+
+<div class="card">
+<span class="tag">POR QUÉ NO ES PORTABLE</span>
+<h3>Sin inmutabilidad no hay confianza. Sin portabilidad no hay competencia.</h3>
+<ul>
+<li><b>Auditoría:</b> El ledger debe ser inmutable y append-only. Si se reescribe, saldos no cuadran. Si no cuadran, el sistema se cae. Por eso SPEI nunca borra, solo compensa.</li>
+<li><b>Lock-in:</b> Si te dieran tu historial en JSON estructurado + tu reputación, te irías en 2 minutos. Eso rompe el moat.</li>
+<li><b>Open Banking de teatro:</b> Te venden interoperabilidad, pero la letra chiquita es formato no estructurado.</li>
+</ul>
+</div>
+
+<div class="card" style="border-style:dashed;border-color:#111">
+<h3>La proporción</h3>
+<p style="margin:0">La permanencia del registro es proporcional a la permanencia del Estado. El Estado no puede permitir que su sistema de liquidación sea reescribible. La no-portabilidad es el costo de esa permanencia.</p>
+</div>
+
+<div class="foot">
+Fricción cero = placebo. Sombra digital = real.<br>
+<a href="https://github.com/iSystem32/yield-placebo">github.com/iSystem32/yield-placebo</a>
+</div>
+</div>
+</body>
+</html>
