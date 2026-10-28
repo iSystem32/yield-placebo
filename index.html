@@ -12,6 +12,11 @@
   blockquote{border-left:3px solid #111;padding-left:16px;margin:24px 0;font-style:italic}
   code{background:#eee;padding:2px 6px;border-radius:4px}
   footer{margin-top:80px;font-size:.9rem;color:#888;border-top:1px solid #ddd;padding-top:20px}
+  .annex{border:1px solid #111;padding:18px 20px;margin:36px 0;background:#fff;font-family:system-ui;line-height:1.5}
+  .annex a{font-weight:600;text-decoration:none;border-bottom:1px solid #111}
+  .annex .links{display:flex;gap:12px;flex-wrap:wrap;margin-top:12px}
+  .annex .pill{border:1px solid #111;border-radius:999px;padding:6px 12px;font-size:.82rem}
+  .annex .pill.primary{background:#111;color:#fff}
 </style>
 </head>
 <body>
@@ -32,6 +37,18 @@
 <h2>Conclusion</h2>
 <p>You're not paid for your skill. You're paid to stay. The extra yield is the cost of keeping you in the game without letting you really play.</p>
 
-<footer>yield-placebo / BS2 License — Change to Apache-2.0 on 2029-10-21</footer>
+<!-- ANNEX C — SPEI / OPEN FINANCE - INYECCIÓN -->
+<div class="annex">
+  <strong>Annex C — SPEI / Open Finance</strong><br>
+  <span style="color:#666;font-size:.92rem">The excuse "we don't have structured format" is theater. SPEI can carry <code>"\"]"</code> without breaking if you use <code>JSON.stringify</code>. Non-portability is a decision.</span>
+  <div class="links">
+    <a class="pill primary" href="./spei/open-finance/">View evidence →</a>
+    <a class="pill" href="./spei/open-finance/console.html">Live console "\"]"</a>
+    <a class="pill" href="./spei/open-finance/payloads.json">payloads.json</a>
+  </div>
+</div>
+
+<footer>yield-placebo / BS2 License — Change to Apache-2.0 on 2029-10-21<br>
+<a href="./spei/">/spei/</a> · <a href="https://github.com/iSystem32/yield-placebo">github</a></footer>
 </body>
 </html>
