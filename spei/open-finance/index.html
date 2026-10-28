@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Open Finance — prueba de portabilidad</title>
+<style>
+body{margin:0;font-family:system-ui;background:#fbfaf8;color:#111}
+.wrap{max-width:720px;margin:0 auto;padding:60px 24px}
+h1{font-family:Georgia,serif;font-size:2.6rem;letter-spacing:-1px;margin:0}
+.card{border:1px solid #e5e7eb;background:#fff;border-radius:14px;padding:20px;margin:20px 0}
+code{background:#111;color:#0f0;padding:16px;border-radius:10px;display:block;overflow:auto;font-size:.78rem;line-height:1.5;white-space:pre}
+.btn{display:inline-block;background:#111;color:#fff;border-radius:999px;padding:12px 20px;text-decoration:none;font-weight:600;margin-top:12px}
+.muted{color:#6b7280;font-size:.85rem}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a href="../" style="text-decoration:none;color:#6b7280">← spei</a>
+<h1>Open Finance</h1>
+<p class="muted">Si existe formato estructurado. La no-portabilidad es una decisión, no una limitación técnica.</p>
+
+<div class="card">
+<h3>Mock — lo que te niegan por Art 51</h3>
+<code>{
+  "account": "CLABE ****1234",
+  "balance": 50320.21,
+  "institution": "BBVA / STP / Banorte",
+  "transactions": [
+    {
+      "date": "2026-10-27",
+      "amount": 50,
+      "concept": "PAGO \"SERVICIOS\"",
+      "sender_rfc": "****",
+      "test_payload": "\"\"]"
+    }
+  ],
+  "holder": {
+    "name": "Nombre completo",
+    "curp": "CURP",
+    "kyc_level": 3
+  },
+  "format": "JSON estructurado, API REST, OAuth2",
+  "note": "JSON.stringify escapa correctamente \\\"\\\"]"
+}</code>
+<p class="muted">Evidencia de que el formato estructurado sí existe. El PDF es teatro.</p>
+</div>
+
+<div class="card">
+<h3>Cómo ver tu propia cuenta</h3>
+<ol>
+<li>BBVA: App → Open Banking → Ver mis otros bancos</li>
+<li>Santander: Finanzas → Agrega tu dinero de otros bancos</li>
+<li>Autoriza con token. Te regresa JSON real, no PDF.</li>
+</ol>
+<a class="btn" href="https://belvo.com/docs/" target="_blank">Docs Belvo</a>
+<a class="btn" style="background:#fff;color:#111;border:1px solid #111;margin-left:8px" href="./payloads.json" target="_blank">Ver payloads.json</a>
+</div>
+
+<div class="card" style="border-style:dashed;border-color:#111">
+<h3>Anexo C — Para tu tesis</h3>
+<p style="margin:0">Mock = lo que debería entregarte. payloads.json = pruebas de que "\"]" no debe romper el formato. Si tu banco dice que no puede por formato, muéstrale esto.</p>
+</div>
+
+<p class="muted" style="margin-top:40px">yield-placebo / isystem32 — fricción cero es placebo, sombra digital es real. <br><a href="./payloads.json" style="color:#6b7280">./payloads.json</a></p>
+</div>
+</body>
+</html>
