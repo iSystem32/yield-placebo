@@ -1,0 +1,30 @@
+[
+  {
+    "id": "001",
+    "test": "comilla + corchete",
+    "input": "\"\"]",
+    "raw": "\"\"]",
+    "escaped": "\\\"\\\"]",
+    "expected": "Debe guardarse escapado sin romper el JSON"
+  },
+  {
+    "id": "002",
+    "test": "concepto SPEI con comillas",
+    "input": "PAGO FACTURA \"SERVICIOS\"",
+    "escaped": "PAGO FACTURA \\\"SERVICIOS\\\"",
+    "expected": "JSON.stringify debe escaparlo automáticamente"
+  },
+  {
+    "id": "003",
+    "test": "inyeccion",
+    "input": "\"}]; DROP TABLE usuarios; --",
+    "expected": "No debe ejecutar, solo guardarse como texto plano"
+  },
+  {
+    "id": "004",
+    "test": "emoji + simbolo",
+    "input": "pago 😵‍💫 -> $50",
+    "expected": "UTF-8 debe soportarse sin romper formato"
+  }
+]
+
