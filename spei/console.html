@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Consola — test formato estructurado</title>
+<style>
+body{margin:0;font-family:system-ui;background:#0f1113;color:#e5e7eb}
+.wrap{max-width:720px;margin:0 auto;padding:40px 24px}
+textarea{width:100%;height:120px;background:#111;border:1px solid #333;color:#0f0;border-radius:10px;padding:12px;font-family:monospace}
+button{background:#fff;color:#111;border:0;border-radius:999px;padding:10px 18px;font-weight:700;cursor:pointer}
+pre{background:#111;border:1px solid #333;border-radius:10px;padding:16px;overflow:auto;min-height:80px}
+a{color:#9ca3af}
+</style>
+</head>
+<body>
+<div class="wrap">
+<a href="./">← open-finance</a>
+<h1>Consola de prueba</h1>
+<p style="color:#9ca3af">Prueba si "\"]" rompe tu formato estructurado. Debe decir OK.</p>
+
+<textarea id="input">{"concepto": """]"}</textarea>
+<button onclick="test()">Probar JSON.parse</button>
+<button onclick="loadPayloads()" style="background:#333;color:#fff;margin-left:8px">Cargar payloads.json</button>
+
+<pre id="out">esperando...</pre>
+
+<script>
+function test(){
+  const txt = document.getElementById('input').value;
+  const out = document.getElementById('out');
+  try {
+    const obj = JSON.parse(txt);
+    out.textContent = '✅ OK — JSON válido:\n' + JSON.stringify(obj, null, 2);
+    out.style.color = '#22c55e';
+  } catch(e){
+    out.textContent = '❌ ROTO — ' + e.message + '\n\nFix: usa JSON.stringify({concepto: input})';
+    out.style.color = '#ef4444';
+  }
+}
+function loadPayloads(){
+  fetch('./payloads.json')
+    .then(r=>r.json())
+    .then(j=>{
+      document.getElementById('input').value = JSON.stringify({concepto: j[0].input}, null, 2);
+      test();
+    });
+}
+test();
+</script>
+</div>
+</body>
+</html>
